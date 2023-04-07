@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    
+</head>
+<body>
+
+    <div id="prepared-password-block">
+        <span id="generated-password">psfSFDF23fSc23</span>
+        <svg id="Layer_1"  width='30' height='30' data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs></defs><title>Copy</title><path class="cls-1" d="M75,80H29.31a5,5,0,0,1-3.53-8.54L71.46,25.78A5,5,0,0,1,80,29.31V75A5,5,0,0,1,75,80ZM41.38,70H70V41.38Z"/><path class="cls-1" d="M105.85,155H29.31a5,5,0,0,1-5-5V75a5,5,0,0,1,10,0v70h71.54A14.17,14.17,0,0,0,120,130.85V34.31H75a5,5,0,1,1,0-10h50a5,5,0,0,1,5,5V130.85A24.17,24.17,0,0,1,105.85,155Z"/><path class="cls-1" d="M151.54,175.69H75a5,5,0,0,1-5-5V150a5,5,0,0,1,10,0v15.69h71.54a14.17,14.17,0,0,0,14.15-14.15V54.81H125a5,5,0,0,1,0-10h45.69a5,5,0,0,1,5,5V151.54A24.17,24.17,0,0,1,151.54,175.69Z"/><path class="cls-1" d="M100,105H50a5,5,0,0,1,0-10h50a5,5,0,0,1,0,10Z"/><path class="cls-1" d="M100,129.91H50a5,5,0,0,1,0-10h50a5,5,0,0,1,0,10Z"/><path class="cls-1" d="M150,129.91H125a5,5,0,0,1,0-10h25a5,5,0,0,1,0,10Z"/><path class="cls-1" d="M150,105H125a5,5,0,0,1,0-10h25a5,5,0,0,1,0,10Z"/></svg>
+    </div>
+
+    <div id="generate-password-block">
+
+        <div id="password-length-block">
+            <div id="password-length-text">
+                Character Length
+                <span id="length-number">10</span>
+            </div>
+            
+            <div id="slider-block">
+
+                <input type="range" min="8" max="20" value="10" id="slider">
+                <div id="progress-line" ></div>
+                
+            </div>
+            
+        </div>
+
+        <div id="password-strength-block">
+            <form id="checkboxes">
+                <label class="checkbox">
+                    <input type="checkbox" class ='checkbox_input' value="uppercase" checked = 'true'>
+                    <span class="new_checkbox"></span>
+                    Include Uppercase Letters
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" class ='checkbox_input' value="lowercase" checked = 'true'>
+                    <span class="new_checkbox"></span>
+                    Include Lowercase Letters
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" class ='checkbox_input' value="numbers" checked = 'true'>
+                    <span class="new_checkbox"></span>
+                    Include Numbers
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" class ='checkbox_input' value="symbols" >
+                    <span class="new_checkbox"></span>
+                    Include Symblos
+                </label>
+            </form>
+
+        </div>
+        <div id="show-strength-block">
+
+            <span>STRENGTH</span>
+
+            <div id="show-strength-bar">
+                <span id="password-strength-name">STRONG</span>
+                <div class="strength-bar"></div>
+                <div class="strength-bar"></div>
+                <div class="strength-bar"></div>
+                <div class="strength-bar"></div>
+            </div>
+
+        </div>
+
+        <button id="generate-button">
+            <span id="generate-text">GENERATE</span>
+        </button>
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

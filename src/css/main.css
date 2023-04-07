@@ -1,0 +1,353 @@
+@import './reset.css';
+@import url(https://fonts.googleapis.com/css?family=Blinker:100,200,300,regular,600,700,800,900);
+
+/* variables */
+
+:root{
+    --style-color: #36e0ec;
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    background-color:black;
+
+    font-family: 'Blinker', sans-serif;
+    color: white;
+}
+
+/* prepared-password-block */
+
+#prepared-password-block{
+    width: 500px;
+    background-color: #2c2c2d;
+    padding: 20px;
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+}
+
+#Layer_1{
+    fill: white;
+    transition: 0.25s;
+}
+
+#Layer_1:hover{
+    fill: var(--style-color);
+    cursor: pointer;
+    /* -webkit-transform: scale(1.2); */
+    /* -ms-transform: scale(1.2); */
+    transform: scale(1.2);
+}
+
+/* generate-password-block */
+
+#generate-password-block{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 500px;
+    padding: 20px;
+    background-color: #2c2c2d;
+}
+
+#password-length-block{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    /* background-color: rgb(146, 101, 101); */
+}
+
+#password-length-text{
+    display:flex;
+    justify-content: space-between;
+    /* background-color: #65af6d; */
+    /* для выравнивания Character Length */
+    line-height: 40px;
+}
+
+#length-number{
+    color: var(--style-color); 
+    font-size: 30px;
+}
+
+
+/* slider */
+
+
+ #slider-block{
+    width:100%;
+    position: relative;
+}
+input[type="range"] {
+	font-size: 1.5rem;
+	width: 100%;
+}
+
+input[type="range"] {
+	color: var(--style-color); 
+	--thumb-height: 25px;
+	--track-height: 5px;
+	--track-color: rgb(0, 0, 0);
+	--brightness-hover: 110%;
+	--brightness-down: 70%;
+	--clip-edges: 0.125em;
+}
+
+
+/* === range commons === */
+input[type="range"] {
+	/* position: relative; */
+	/* background: #fff0; */
+	overflow: hidden;
+}
+
+input[type="range"]:active {
+	cursor: grabbing;
+}
+
+
+/* === WebKit specific styles === */
+input[type="range"],
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	transition: all ease 100ms;
+	height: var(--thumb-height);
+}
+
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-webkit-slider-thumb {
+	position: relative;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	--thumb-radius: 25px;
+	--clip-top: calc((var(--thumb-height) - var(--track-height)) * 0.5 - 2px);
+	--clip-bottom: calc(var(--thumb-height) - var(--clip-top));
+	--clip-further: calc(100% + 1px);
+	--box-fill: calc(-100vmax - var(--thumb-width, var(--thumb-height))) 0 0
+		100vmax currentColor;
+
+	width: var(--thumb-width, var(--thumb-height));
+	/* background: linear-gradient(currentColor 0 0) scroll no-repeat left center /
+		50% calc(var(--track-height) + 1px); */
+	background-color: rgb(255, 255, 255);
+    border: 3px rgb(255, 255, 255) solid;
+	box-shadow: var(--box-fill);
+	border-radius: var(--thumb-width, var(--thumb-height));
+
+	filter: brightness(100%);
+	clip-path: polygon(
+		100% -1px,
+		var(--clip-edges) -1px,
+		0 var(--clip-top),
+		-100vmax var(--clip-top),
+		-100vmax var(--clip-bottom),
+		0 var(--clip-bottom),
+		var(--clip-edges) 100%,
+		var(--clip-further) var(--clip-further)
+	);
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+	filter: brightness(var(--brightness-hover));
+	cursor: grab;
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+	filter: brightness(var(--brightness-down));
+	cursor: grabbing;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+	background: linear-gradient(var(--track-color) 0 0) scroll no-repeat center /
+		100% calc(var(--track-height) );
+}
+
+
+ */
+/* MOZILA */
+
+ input[type="range"],
+input[type="range"]::-moz-range-track,
+input[type="range"]::-moz-range-thumb {
+	appearance: none;
+	transition: all ease 100ms;
+	
+}
+
+input[type="range"]::-moz-range-track,
+input[type="range"]::-moz-range-thumb,
+input[type="range"]::-moz-range-progress {
+	background: rgba(211, 68, 68, 0.707);
+} 
+
+ input[type="range"]::-moz-range-thumb {
+	background: rgb(255, 255, 255);
+	border: 0;
+    width:25px;
+    height:25px;
+	border-radius: 50%;
+	cursor: grab;
+}
+
+input[type="range"]:active::-moz-range-thumb {
+	cursor: grabbing;
+}
+
+input[type="range"]::-moz-range-track {
+	width: 100%;
+	background: rgb(0, 0, 0);
+}
+
+input[type="range"]::-moz-range-progress {
+	appearance: none;
+	background: var(--style-color); 
+	transition-delay: 30ms;
+    height:10px
+} 
+
+ input[type="range"]::-moz-range-thumb,
+input[type="range"]::-moz-range-progress {
+	filter: brightness(100%);
+}
+
+ input[type="range"]:hover::-moz-range-thumb,
+input[type="range"]:hover::-moz-range-progress {
+	filter: brightness(110%);
+} 
+
+input[type="range"]:active::-moz-range-thumb,
+input[type="range"]:active::-moz-range-progress {
+	filter: brightness(70%);
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* password-strength-block  */
+
+#password-strength-block{
+}
+
+#checkboxes{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.checkbox{
+    /* background-color: #cb7171; */
+    padding-left: 1.5em;
+    height: 25 px;
+    line-height: 25px;
+}
+
+.checkbox_input{
+    -webkit-appearance: none;
+    position:absolute; /* чтобы убрать пробелы после скрытия стандартных эл-тов */
+}
+
+.new_checkbox{
+    position:absolute;
+    height: 0.7em;
+    width: 0.7em;
+    margin-left: -1.5em;
+    margin-top: 6px; 
+    border-radius: 0.03em;
+    box-shadow: 0 0 0 0.1em white;
+}
+
+/* checked */
+
+.checkbox_input:checked + .new_checkbox{
+    background-color: var(--style-color);
+    box-shadow: 0 0 0 0.1em var(--style-color); 
+    background-image: url(./img/checkmark.svg);
+}
+
+/* focused */
+/* После повторного клика остается фокус ;( */
+.checkbox_input:focus + .new_checkbox {
+    box-shadow: 0 0 0 0.1em var(--style-color); 
+}
+
+.checkbox_input:checked:focus + .new_checkbox {
+    box-shadow: 0 0 0 0.1em var(--style-color);
+}
+
+.checkbox_input:hover + .new_checkbox {
+    box-shadow: 0 0 0 0.1em var(--style-color);
+}
+
+.checkbox_input:disabled + .new_checkbox {
+    background-color: var(--style-color);
+    box-shadow: 0 0 0 0.1em var(--style-color); 
+    background-image: url(./img/checkmark.svg);
+    opacity: 0.5;
+}
+
+
+/* show-strength-block */
+
+#show-strength-block{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    background-color: #383838;
+    height: 50px;
+}
+
+#show-strength-bar{
+    display: inline-flex;
+    align-items: center;
+}
+
+.strength-bar{
+    width:10px;
+    height:25px;
+    border: rgb(255, 255, 255) solid 1px;
+    margin-left: 7px;
+    background-color: #383838;
+}
+
+.strength-bar.active{
+    background-color: #fee737d9;
+    border: #fee737d9 solid 1px;
+    border-radius: 1.5px;
+}
+
+/* BUTTON */
+
+#generate-button{
+    width:100%;
+    border: var(--style-color) solid 1px;
+    height: 50px;
+    color: var(--style-color);
+    
+}
+
+
+#generate-button:hover > #generate-text{
+    font-size: 20px;
+}
+
+#generate-text{
+    transition-duration: 0.3s;
+    transition-delay: 0.15s;
+}
