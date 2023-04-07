@@ -1,7 +1,7 @@
 // для автоматического обновления html и css
 // import './index.html';
-// import './css/main.css';
-// import './css/reset.css';
+import './css/main.css';
+import './css/reset.css';
 // import './css/normalize.css';
 
 console.log('123')
