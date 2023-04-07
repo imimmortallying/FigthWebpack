@@ -4,7 +4,7 @@ import './css/main.css';
 import './css/reset.css';
 // import './css/normalize.css';
 
-console.log('123')
+console.log('11111')
 
 let progressline = document.querySelector('#progress-line');
 const slider = document.querySelector('#slider');

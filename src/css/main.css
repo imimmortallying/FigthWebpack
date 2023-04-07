@@ -133,7 +133,7 @@ input[type="range"]::-webkit-slider-thumb {
 		100vmax currentColor;
 
 	width: var(--thumb-width, var(--thumb-height));
-	/* background: linear-gradient(currentColor 0 0) scroll no-repeat left center /
+	/* background: linear-gradient(currentColor 0 0) scroll no-repeat left center
 		50% calc(var(--track-height) + 1px); */
 	background-color: rgb(255, 255, 255);
     border: 3px rgb(255, 255, 255) solid;
@@ -169,7 +169,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 
- */
+ 
 /* MOZILA */
 
  input[type="range"],
